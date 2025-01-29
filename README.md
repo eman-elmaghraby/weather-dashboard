@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Weather Dashboard - Next.js with TypeScript, Redux, and Tailwind CSS
 
-## Getting Started
+This is a simple weather dashboard application built using **Next.js**, **TypeScript**, **Redux Toolkit**, and **Tailwind CSS**. It fetches weather information for a city and displays it on the homepage. Users can search for a city, view weather details, and toggle between light and dark modes.
 
-First, run the development server:
+## Project Structure
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **/app**: Contains the main app components and pages.
+  - **/layout.tsx**: The root layout of the application that wraps the entire page.
+  - **/page.tsx**: The homepage that fetches and displays weather information.
+- **/components**: Contains reusable components.
+  - **/WeatherCard.tsx**: A card component that displays weather details for a city.
+  - **/SearchBar.tsx**: A search bar component that allows users to search for weather by city name.
+  - **/ErrorMessage.tsx**: A component that displays error messages (e.g., city not found).
+  - **/ThemeToggle.tsx**: A button component that allows users to toggle between light and dark modes.
+- **/hooks**: Contains custom hooks for functionality like debouncing and geolocation.
+  - **/useDebounce.tsx**: A custom hook to debounce search input for fetching weather data.
+  - **/useGeolocation.tsx**: A custom hook to fetch the user's geolocation.
+- **/lib**: Contains utility functions and API calls.
+  - **/api.tsx**: A utility function to fetch weather data from the WeatherAPI.
+  - **/utils.tsx**: Utility functions (e.g., for capitalizing city names).
+- **/store**: Contains Redux store setup and slices for managing weather and theme state.
+  - **/slices/weatherSlice.tsx**: A slice for handling weather-related state (fetching weather data, setting errors).
+  - **/slices/themeSlice.ts**: A slice for managing theme state (light or dark mode).
+  - **/store.tsx**: The Redux store configuration.
+- **/styles**: Contains the global CSS files, including Tailwind CSS setup.
+  - **/globals.css**: Global styles.
+- **tailwind.config.js**: Configuration file for Tailwind CSS.
+- **next.config.js**: Next.js configuration file.
+- **tsconfig.json**: TypeScript configuration file.
+- **package.json**: Project dependencies and scripts.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Search Functionality**: Allows users to search for weather by city name.
+- **Geolocation**: Automatically fetch weather based on the user's current location.
+- **Theme Toggle**: Toggle between light and dark modes.
+- **Error Handling**: Displays error messages when an invalid city is entered or weather data can't be fetched.
+- **Responsive Design**: Tailwind CSS ensures the app is responsive and works on different screen sizes.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Setup & Installation
 
-## Learn More
+Follow the steps below to set up the project locally:
 
-To learn more about Next.js, take a look at the following resources:
+1. **Clone the repository**:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   git clone https://github.com/eman-elmaghraby/weather-dashboard.git
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

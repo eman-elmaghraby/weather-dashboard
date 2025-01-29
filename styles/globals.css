@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Light mode */
+  body.light {
+    background-color: #f7fafc; /* Light background */
+    color: #2d3748; /* Dark text */
+  }
+  
+  /* Dark mode */
+  body.dark {
+    background-color: #2d3748; /* Dark background */
+    color: #edf2f7; /* Light text */
+  }
+  
+
+  
+  
+  .text-light {
+    color: #2d3748;
+  }
+  
+  .text-dark {
+    color: #edf2f7;
+  }
