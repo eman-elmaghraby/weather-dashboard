@@ -49,4 +49,4 @@ Follow the steps below to set up the project locally:
 
 ## Deploy on Vercel
 
-
+https://weather-dashboard-snowy-three.vercel.app/
