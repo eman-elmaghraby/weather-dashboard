@@ -41,12 +41,11 @@ This is a simple weather dashboard application built using **Next.js**, **TypeSc
 
 Follow the steps below to set up the project locally:
 
-1. **Clone the repository**:
+1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/eman-elmaghraby/weather-dashboard.git
+  https://github.com/eman-elmaghraby/weather-dashboard.git
 
 
-## Deploy on Vercel
+2. Deploy on Vercel
 
-https://weather-dashboard-snowy-three.vercel.app/
+  https://weather-dashboard-snowy-three.vercel.app/
